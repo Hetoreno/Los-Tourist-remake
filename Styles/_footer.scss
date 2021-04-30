@@ -1,0 +1,65 @@
+footer{
+    @include flex(center,center,column);
+    width:60%;
+    margin:auto;
+
+    ul{
+        @include flex(center,center,row);
+        flex-wrap: wrap;
+        li{
+            margin:1rem;
+            font-size:$text;
+            font-weight:bold;
+            
+        }
+
+        a{
+            color:black;
+        }
+    }
+
+    h1{
+        font-family: 'Lobster', cursive;
+        font-weight: 500;
+        font-size:$header2;
+        background: linear-gradient(#E557D7 0% , #FFD39E 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    p{
+        color:$gray-text;
+        font-size: $text;
+        text-align: center;
+        padding:2rem;
+    }
+
+    .social-links{
+        a{
+            background: rgb(194, 194, 194);
+            border-radius: 50%;
+            width:6rem;
+            height:6rem;
+            font-size:$medium;
+            line-height: 6rem;
+            display: block;
+            text-align: center;
+            margin: 0rem 2rem;
+        }
+
+        a:hover{
+            background:none;
+            color:$highlight;
+            transition: all 0.2s ease-in;
+        }
+    }
+
+    .footer-nav{
+        a:hover{
+            color:$highlight;
+            transition: all 0.2s ease-in;
+        }
+    }
+
+
+}

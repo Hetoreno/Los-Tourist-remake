@@ -1,0 +1,82 @@
+#events{
+    margin:9rem 0rem;
+    header{
+        @include flex(center,center,column);
+        text-align: center;
+        
+        
+        h2{
+            font-size: $huge-text;
+        }
+        p{
+            font-size: $text;
+            color:$gray-text;
+            text-align: center;
+            width:50%;
+        }
+    }
+}
+
+.event-cards{
+    @include flex(center,center,row);
+    width: 80%;
+    margin: auto;
+    min-height:80vh;
+    flex-wrap: wrap;
+}
+
+.e-card{
+    @include flex(center,space-between,column);
+    width:30%;
+    margin: 1rem;
+    min-height:60vh;
+    text-align: center;
+
+        p{
+            background:white;
+            margin:3rem;
+            font-size: $medium;
+            border-radius: 3rem;
+            padding:1rem;
+        }
+
+        h3{
+            color:white;
+            font-size: $header2;
+        }
+
+        a{
+            background: linear-gradient(180deg, #fccc92 10%, #e950da 100%);
+            font-size: $text;
+            color:white;
+            border-radius: 3rem;
+            padding:1.5rem 2rem;
+            margin:4rem 0rem;
+        }
+
+        a:hover{
+            color:black;
+            transition: ease-in all 0.3s;
+        }
+}
+
+.one{
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.35)) ,url(/Images/pexels-genaro-servín-757828.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.two{
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.35)), url(/Images/pexels-giovanni-calia-2181230.jpg) ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.three{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.35)), url(/Images/pexels-marcin-dampc-1684187.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

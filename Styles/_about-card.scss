@@ -1,0 +1,49 @@
+.about-services{
+    min-height:90vh;
+    header{
+        @include flex(center,center,column);
+        padding:4rem;
+        h2{
+            font-size: $huge-text;
+        }
+        p{
+            font-size: $text;
+            color:$gray-text;
+            
+        }
+    }
+}
+
+.cards{
+    @include flex(center,center,row);
+    flex-wrap: wrap;
+    width:90%;
+    margin: auto;
+}
+
+.card{
+    @include flex(center,space-between,row);
+    background:white;
+    width:40%;
+    margin:3rem;
+     img{
+         max-width:20%;
+         margin:0rem 3rem;
+     }
+
+}
+
+.card-info{
+    h4{
+        font-size: $header1;
+    }
+    p{
+        font-size: $text;
+        color:$gray-text;
+        padding:2rem 0rem;
+    }
+    a{
+        font-size: $text;
+        color:$highlight;
+    }
+}

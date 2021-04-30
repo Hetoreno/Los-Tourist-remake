@@ -1,0 +1,43 @@
+#sign-up{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(/Images/pexels-roberto-nickson-2525903.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height:40vh;
+    @include flex(center,center,column);
+    flex-wrap: wrap;
+    text-align: center;
+
+    h2{
+        font-size: $huge-text;
+        color: white;
+    }
+
+    p{
+        color:$light-gray;
+        font-size: $text;
+        margin: 1.5rem;
+    }
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    input{
+        font-size:$text;
+        padding:1rem;
+    }
+    button{
+        padding:1rem 3rem;
+        border: none;
+        font-size:$text;
+        background:$highlight;
+        color:white;
+    }
+
+    button:hover{
+        background: #c53eb8;
+        transition: ease-in all 0.2s;
+    }
+}

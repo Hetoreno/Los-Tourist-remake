@@ -1,0 +1,235 @@
+$header1: 2.5rem;
+$header2:3.5rem;
+$header3:2rem;
+$medium:3rem;
+$huge-text:6rem;
+$text:2rem;
+$gray-text:#767676;
+$light-gray:#dfdfdf;
+$highlight:#E557D7;
+$background:rgb(245, 245, 245);
+$covid-notice:#ED3939;
+$orange-background:#ffba66;
+
+@mixin flex($align,$justify,$direction){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+
+@import "global";
+@import "intro";
+@import "about-us";
+@import "about-card";
+@import "gallery";
+@import "event";
+@import "sign-up";
+@import "footer";
+
+@media screen and (max-width:1390px) and (min-width:1025px){/* for the about us section */
+    
+}
+
+/* burger NAV */
+@media screen and (max-width:1024px){
+    .headi{
+        nav{
+            ul{
+                @include flex (flex-start,center,column);
+            }
+
+            .nav-links, .links{
+                display: none;
+            }
+        }
+    }
+    
+    .burger{
+        display: block;
+        position: relative;
+        cursor: pointer;
+        border-radius: 1rem;
+        z-index: 2;
+        
+        span{
+            background: white;
+            margin:0.5rem 1rem;
+            padding:0.3rem 1.5rem;
+            display: block;
+            position: sticky;
+            border-radius: 2rem;
+            transition: all 0.5s ease-in;
+        }
+    }
+    
+    
+    .mobile{
+        @include flex(center,center,row);
+        background:rgb(0, 0, 0);
+        height:100%;
+        width: 100%;
+        position: fixed;
+        top:0;
+        left:100%;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.5s ease-in;
+        z-index: 1;
+        
+        .burger-links{
+            li{
+                margin:1rem;
+            }
+        }
+        .burger-social{
+        @include flex(center,center,row);
+        li{
+            margin: 1rem;
+        }
+    }
+    }
+
+    .link-open{
+        transform: translate(-100%);
+    }
+
+    .toggle{
+        .line1{
+            transform: rotateZ(45deg) translateY(250%);
+            color:white;
+        }
+
+        .line2{
+            opacity: 0;
+        }
+
+        .line3{
+            color:white;
+            transform: rotateZ(-45deg) translateY(-250%);
+        }
+    }
+}
+
+/* Tablet */
+@media screen and (max-width:1024px){
+    html{
+        font-size:70%;
+    }
+    /* Intro */
+    .headi{
+        width:70%;
+        padding:2rem;
+    }
+    .intro-description{
+        width: 100%;
+    }
+
+    /* About */
+    .about-container{
+        width: 100%;
+    }
+    .info-discription{
+        
+        p{
+            margin:2rem;
+            
+        }
+    }
+    
+    .to-top{
+        display: none;
+    }
+    /* About Services */
+    .about-services{
+        margin:5rem 0rem;
+    }
+
+    .cards{
+        @include flex(center,center,column);
+        width:100%;
+        margin: auto;
+        .card{
+            width:90%;
+            margin:1rem;
+            padding:2rem;
+            .card-info{
+                p{
+                    line-height:4rem;
+                    padding:1rem 0rem;
+                }
+            }
+        }
+    }
+
+    /* Gallery */
+    .locations-grid{
+        width:100%;
+        .pic-box{
+            width:45%;
+        }
+    }
+
+    /* Event Cards */   
+    #events{
+        
+        header{
+            margin: 2rem;
+            h2{
+                margin: 2rem 0rem;
+            }
+            p{
+                width:80%;
+                line-height:3.5rem;
+            }
+        }
+        .event-cards{
+            width:100%;
+            .e-card{
+                width:45%;
+                
+            }
+        }
+        
+    }
+    /* Sign Up  */
+    #sign-up{
+        .container{
+        @include flex(center,center,column);
+        flex-wrap: wrap;
+        width:100%;
+        form{
+            @include flex(center,center,column);
+            flex-wrap: wrap;
+            button{
+                width: 100%;
+            }
+        }
+    }
+    }
+
+    footer{
+        width:100%;
+    }
+    
+}
+
+
+
+/* Mobile */
+@media screen and (max-width:500px){
+    html{
+        font-size: 45%;
+    }
+
+    #sign-up{
+        .container{
+            h2{
+            margin:2rem;
+            font-size:$header2;
+        }
+        }
+        
+    }
+}
