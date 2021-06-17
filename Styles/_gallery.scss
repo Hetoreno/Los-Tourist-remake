@@ -4,13 +4,14 @@
 
         h2{
             font-size: $huge-text;
+            margin-bottom: 5rem;
         }
 
     }
 
         nav{
             @include flex(center,center,row);
-            
+            margin:1rem 0rem;
 
                 ul{
                     @include flex(center,center,row);
@@ -51,7 +52,7 @@
 }
 
 .locations-grid{
-    min-height:90vh;
+    min-height:60vh;
     width: 80%;
     margin: auto;
     @include flex(center,center,row);

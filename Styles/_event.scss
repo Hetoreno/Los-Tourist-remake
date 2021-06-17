@@ -7,12 +7,14 @@
         
         h2{
             font-size: $huge-text;
+            margin:2rem 0rem;
         }
         p{
             font-size: $text;
             color:$gray-text;
             text-align: center;
             width:50%;
+            line-height:3rem;
         }
     }
 }
@@ -21,7 +23,7 @@
     @include flex(center,center,row);
     width: 80%;
     margin: auto;
-    min-height:80vh;
+    min-height:70vh;
     flex-wrap: wrap;
 }
 

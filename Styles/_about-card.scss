@@ -1,5 +1,6 @@
 .about-services{
     min-height:90vh;
+    margin-top:20rem;
     header{
         @include flex(center,center,column);
         padding:4rem;

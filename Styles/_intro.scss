@@ -76,19 +76,19 @@
 
 /* Intro Section */
 #intro{
-    min-height:100vh;
+    position: relative;
+    min-height:130vh;
     background:linear-gradient(rgba(0, 0, 0, 0.589), transparent) , url(/Images/sterling-davis-4iXagiKXn3Y-unsplash.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    position: relative;
 }
 
 .intro-description{
     text-align: center;
     position: absolute;
-    top:50%;
+    top:35%;
     left:50%;
     transform: translate(-50%, -30%);
     @include flex(center,center,column);
@@ -149,4 +149,11 @@
 
 .burger{
     display: none;
+}
+
+.wave{
+    position: absolute;
+    bottom:-2%;
+    left:0;
+    width:100%;
 }

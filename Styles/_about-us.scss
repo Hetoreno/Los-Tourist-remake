@@ -1,13 +1,12 @@
 #about-us{
     min-height:80vh;
-    
     header{
         @include flex(center,center,row);
         text-align: center;
 
         h1{
             font-size: $huge-text;
-            padding:4rem;
+            padding:10rem;
         }
     }
 }
