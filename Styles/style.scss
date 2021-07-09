@@ -36,62 +36,69 @@ $orange-background:#ffba66;
 /* burger NAV */
 @media screen and (max-width:1024px){
     .headi{
-        nav{
-            ul{
-                @include flex (flex-start,center,column);
-            }
-
-            .nav-links, .links{
-                display: none;
-            }
-        }
+        display: none;
     }
-    
-    .burger{
+
+    .mobile-headi{
         display: block;
-        position: relative;
-        cursor: pointer;
-        border-radius: 1rem;
-        z-index: 2;
-        
-        span{
-            background: white;
-            margin:0.5rem 1rem;
-            padding:0.3rem 1.5rem;
-            display: block;
-            position: sticky;
-            border-radius: 2rem;
-            transition: all 0.5s ease-in;
-        }
-    }
-    
-    
-    .mobile{
-        @include flex(center,center,row);
-        background:rgb(0, 0, 0);
-        height:100%;
-        width: 100%;
-        position: fixed;
-        top:0;
-        left:100%;
-        flex-direction: column;
-        align-items: center;
-        transition: transform 0.5s ease-in;
-        z-index: 1;
-        
-        .burger-links{
-            li{
-                margin:1rem;
+        width:100%;
+        min-height:20vh;
+        nav{
+            font-size: $medium;
+            padding-top: 2rem;
+            width:80%;
+            margin: auto;
+            @include flex(center,space-between,row);
+            .burger{
+                display: block;
+                position: relative;
+                cursor: pointer;
+                border-radius: 1rem;
+                z-index: 2;
+                span{
+                    background: white;
+                    margin:0.5rem 1rem;
+                    padding:0.3rem 1.5rem;
+                    display: block;
+                    position: sticky;
+                    border-radius: 2rem;
+                    transition: all 0.5s ease-in;
+                }
+            }
+            
+            .mobile{
+                @include flex(center,center,row);
+                background:rgb(0, 0, 0);
+                height:100%;
+                width: 100%;
+                position: fixed;
+                top:0;
+                left:100%;
+                flex-direction: column;
+                align-items: center;
+                transition: transform 0.5s ease-in;
+                z-index: 1;
+                .burger-links{
+                    li{
+                        margin:2rem;
+                        a{
+                            color:white;
+                        }
+                    }
+                }
+                .burger-social{
+                    @include flex(center,center,row);
+                    li{
+                        margin: 1rem;
+                        a{
+                            color:white;
+                        }
+                    }
+                }
             }
         }
-        .burger-social{
-        @include flex(center,center,row);
-        li{
-            margin: 1rem;
-        }
     }
-    }
-
+    
     .link-open{
         transform: translate(-100%);
     }

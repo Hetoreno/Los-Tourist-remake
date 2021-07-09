@@ -1,10 +1,17 @@
 /* Nav section */
 .headi{
-    width:80%;
+    @include flex(center,center,row);
+    width:100%;
     margin:auto;
     min-height:10vh;
+    position: fixed;
+    top:0;
+    right:0;
+    z-index: 10;
 
     nav{
+        width:80%;
+        margin:auto;
         @include flex(center,space-between,row);
         flex-wrap: wrap;
         font-size:$text;
@@ -16,6 +23,18 @@
                 a{
                     color:white;
                 }
+    }
+}
+
+.scroll-down .headi{
+    transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up .headi{
+    background: white;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+    a{
+        color:black;
     }
 }
 
@@ -70,7 +89,7 @@
     -webkit-text-fill-color: transparent;
 }
 
-.mobile{
+.mobile-headi{
     display: none;
 }
 

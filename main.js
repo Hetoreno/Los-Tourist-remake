@@ -1,4 +1,4 @@
-/* NAV bar */
+/* NAV mobile */
 const burger = document.querySelector(".burger");
 const links = document.querySelector(".mobile");
 const navLinks = document.querySelectorAll(".mobile-link");
@@ -15,8 +15,26 @@ navLinks.forEach(navi =>{
     })
 })
 
+/* NAV desktop bar scroll */
+const body = document.body;
+let lastScroll = 0;
+window.addEventListener("scroll",()=>{
+    const currentScroll = window.pageYOffset;
 
+    if (currentScroll <= 0){
+        body.classList.remove("scroll-up");
+    }
+    if (currentScroll > lastScroll && !body.classList.contains("scroll-down")){
+        body.classList.remove("scroll-up")
+        body.classList.add("scroll-down")
+    }
 
+    if(currentScroll < lastScroll && body.classList.contains("scroll-down")){
+        body.classList.remove("scroll-down")
+        body.classList.add("scroll-up")
+    }
+    lastScroll = currentScroll;
+})
 
 /* To-top arrow */
 const arrow = document.querySelector(".to-top");
@@ -47,4 +65,3 @@ button.forEach((event) =>{
     })  
 })
 /* the 'data-att' needs to match with '.list li' names*/
-
